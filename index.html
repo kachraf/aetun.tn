@@ -350,31 +350,39 @@
         </section>
         <!-- END LOCATION  SECTION -->
         <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
-        <!-- CORE JQUERY  -->
-        <script src="assets/js/jquery-1.11.1.js"></script>
-        <!-- BOOTSTRAP SCRIPTS  -->
-        <script src="assets/js/bootstrap.js"></script>
-        <!-- PRETTYPHOTO SCRIPTS -->
-        <script src="assets/js/jquery.prettyPhoto.js"></script>
-        <!-- PORTFOLIO FILTER PLUGIN  -->
-        <script src="assets/js/jquery.mixitup.min.js"></script>
-        <!-- NICE SCROLL SCRIPTS   -->
-        <script src="assets/js/jquery.nicescroll.min.js"></script>
-        <!-- EASING SCROLL SCRIPTS   -->
-        <script src="assets/js/jquery.easing.min.js"></script>
-        <!-- CUSTOM SCRIPTS  -->
-        <script src="assets/js/custom.js"></script>
-
+        
         <script>
-            function myMap() {
-                var mapOptions = {
-                    center: new google.maps.LatLng(34.736335, 10.756572),
-                    zoom: 15 ,
-                    mapTypeId: google.maps.MapTypeId.HYBRID
-                }
-                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-            }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-    </body>
-    </html>
+          function initMap() {
+            var uluru = {lat: 34.736335, lng: 10.756572};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: uluru
+          });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+          });
+        }
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl5N0fI47KnmMCVpx-HSNbkfOyXT18WN4&callback=initMap" type="text/javascript"></script>
+
+
+    <!-- CORE JQUERY  -->
+    <script src="assets/js/jquery-1.11.1.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- PRETTYPHOTO SCRIPTS -->
+    <script src="assets/js/jquery.prettyPhoto.js"></script>
+    <!-- PORTFOLIO FILTER PLUGIN  -->
+    <script src="assets/js/jquery.mixitup.min.js"></script>
+    <!-- NICE SCROLL SCRIPTS   -->
+    <script src="assets/js/jquery.nicescroll.min.js"></script>
+    <!-- EASING SCROLL SCRIPTS   -->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!-- CUSTOM SCRIPTS  -->
+    <script src="assets/js/custom.js"></script>
+
+
+</body>
+</html>
